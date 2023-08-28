@@ -1,10 +1,8 @@
 #include <iostream>
 #include <queue>
-#define MAX 1501
 
 using namespace std;
 
-int table[MAX][MAX];
 
 int main() {
 
@@ -17,10 +15,11 @@ int main() {
 
 	priority_queue<int, vector<int>, greater<int>> pq;
 
+	int num = 0;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
-			cin >> table[i][j];
-			pq.push(table[i][j]);
+			cin >> num;
+			pq.push(num);
 			if (pq.size() > n) {
 				pq.pop();
 			}
